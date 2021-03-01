@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <component-a></component-a>
+    </div>
+</body>
+
+<style>
+    .card_action {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 350px;
+    }
+
+    .card_container {
+        height: 500px;
+        width: 350px;
+        background-color: #f4f4f4;
+    }
+
+    .card_upper {
+        position: relative;
+        background-color: #f4f4f4;
+    }
+
+    .card_image {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .photo1 {
+        position: relative;
+        width: 360px;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .card_bottom {
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+    }
+
+    .photo2 {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .card_ref {
+        position: absolute;
+        top: 86%;
+        left: 62%;
+        z-index: 3;
+        font-size: 0.9rem;
+    }
+
+    .status {
+        position: absolute;
+        z-index: 3;
+        font-size: 0.9rem;
+        font-family: sans-serif;
+        left: 15%;
+        top: -1.5%;
+    }
+
+    .classes>p {
+        font-weight: bold;
+        margin-left: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .descriptions>p {
+        margin-left: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+</style>
+
+<script>
+
+    Vue.component('component-a', {
+        data: function () {
+            return {
+
+            }
+        },
+        template: `<div class="card_container">
+        <div class="card_upper">
+            <div class="card-action">
+                <!-- <svg class="arrow" viewBox="0 0 242.334 242.334" style="enable-background:new 0 0 242.334 242.334;"
+                    xml:space="preserve">
+                    <path d="M242.334,0H0v242.333h242.333L242.334,0L242.334,0z M94.025,49.749l28.284-28.284l99.702,99.702l-99.702,99.702
+                   l-28.284-28.284l53.245-53.244H22.607v-36.349H147.27L94.025,49.749z" />
+                </svg> -->
+                <p class="status">TO RENT</p>
+            </div>
+            <div class="card_image">
+                <img class="photo1" src="rent_bt_ori.png" alt="">
+                <img class="photo2" src="photo1.jpg" alt="">
+            </div>
+            <div class="card_ref">
+                <p>Ref: XFT.259.KI.1</p>
+            </div>
+        </div>
+        <div class="card_bottom">
+            <div class="classes">
+                
+            </div>
+            <div class="descriptions">
+                <p>{{card.description1}}</p>
+                <p>{{card.description1}}</p>
+                <p>{{card.description1}}</p>
+                <p>{{card.description1}}</p>
+            </div>
+        </div>
+    </div>`
+    })
+
+    new Vue({
+        el: '#app'
+    })
+
+</script>
+
+</html>
