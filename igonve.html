@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./assets/js/card.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="app">
+
+
+
+
+        <card v-for="card in cards" v-bind:key="card.id" :cards="cards" :card="card"></card>
+    </div>
+
+</body>
+
+
+
+<script>
+
+
+    var app = new Vue({
+        el: '#app',
+        data: () => ({
+            cards: [
+                {
+                    id: 1,
+                    src: 'photo1',
+                    img: './assets/photo1.jpg',
+                    status: 'TO RENT',
+                    ref: 'XFT.259.KI.1',
+                    Etiam: 'Ornare, qui pasa bambino',
+                    Suspendi: 'Hasta la vista cangrejo',
+                    Venenatis: 'Lorem por tres',
+                    Maecenas: 2000
+
+                },
+                {
+                    id: 2,
+                    src: 'photo2',
+                    img: './assets/photo2.jpg',
+                    status: 'TO BUY',
+                    ref: 'XFT.259.KI.2',
+                    Etiam: 'Ornare, qui pasa bambino',
+                    Suspendi: 'Hasta la vista cangrejo',
+                    Venenatis: 'Lorem por el cubo',
+                    Maecenas: 1800
+
+                }
+            ]
+        })
+    })
+
+</script>
+
+</html>
